@@ -1,0 +1,259 @@
+2023-05-12 11:16:40,343:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-12 11:24:41,778:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-12 14:23:20,239:INFO:97162962
+2023-05-12 14:23:20,240:INFO:97182761 5000
+2023-05-12 14:23:20,316:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:21,361:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:23:21,372:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:21,552:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 172
+2023-05-12 14:23:21,553:INFO:res_head_number
+2023-05-12 14:23:21,553:INFO:{'state': 'Successful', 'number': '97162962', 'type': 'WCDMA', 'plan': 'A', 'balance': 21195.88, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:23:21,556:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:22,452:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:23:22,457:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:22,653:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 165
+2023-05-12 14:23:22,657:INFO:res_member_number
+2023-05-12 14:23:22,657:INFO:{'state': 'Successful', 'number': '97182761', 'type': 'WCDMA', 'plan': 'A', 'balance': 0, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:23:22,665:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:23,583:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:23:23,588:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:24,444:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-12 14:23:24,450:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:25,352:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:23:25,357:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:23:25,460:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 137
+2023-05-12 14:23:25,813:ERROR:Internal Server Error: /api/receive_sms555
+Traceback (most recent call last):
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1048, "Column 'created_at' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\controller\views.py", line 95, in receive_sms555
+    order = Order.objects.create(head_number=sms_from,
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\base.py", line 831, in save
+    self.save_base(
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\base.py", line 882, in save_base
+    updated = self._save_table(
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\base.py", line 1025, in _save_table
+    results = self._do_insert(
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\base.py", line 1066, in _do_insert
+    return manager._insert(
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\models\sql\compiler.py", line 1657, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\db\backends\mysql\base.py", line 80, in execute
+    raise IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'created_at' cannot be null")
+2023-05-12 14:28:21,934:INFO:D:\Projects\enjoy_kids\controller\models.py changed, reloading.
+2023-05-12 14:30:57,405:INFO:97162962
+2023-05-12 14:30:57,405:INFO:97181063 5000
+2023-05-12 14:30:57,418:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:30:58,322:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:30:58,329:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:30:58,509:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 172
+2023-05-12 14:30:58,515:INFO:res_head_number
+2023-05-12 14:30:58,515:INFO:{'state': 'Successful', 'number': '97162962', 'type': 'WCDMA', 'plan': 'A', 'balance': 21195.88, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:30:58,523:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:30:59,436:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:30:59,438:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:30:59,637:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 165
+2023-05-12 14:30:59,642:INFO:res_member_number
+2023-05-12 14:30:59,642:INFO:{'state': 'Successful', 'number': '97181063', 'type': 'WCDMA', 'plan': 'G', 'balance': 0, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:30:59,650:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:31:00,576:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:31:00,579:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:31:01,409:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-12 14:31:01,414:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:31:01,473:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063%20tany%20dugaartai%20xolbogdoogui%20baina.%20Ta%20xuuxdiin%20dugaaraa%20uuriin%20dugaartai%20xolboxyg%20xusvel%20gmobile.mn%20esvel%20lavlax%203636-s%20medeelel%20avna%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 14:31:01,477:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:31:02,373:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:31:02,378:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:31:02,483:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 137
+2023-05-12 14:31:02,494:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:31:03,390:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:31:03,393:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:31:03,447:DEBUG:https://charge.gmobile.mn:443 "POST /api/priceplan/charge HTTP/1.1" 200 219
+2023-05-12 14:31:03,453:INFO:res_charge
+2023-05-12 14:31:03,484:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:31:03,552:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063-t%20Enjoy%20kids%20uilchilgeenii%203GB-%3E1mbpsGB%2C%2030%20%D1%85%D0%BE%D0%BD%D0%BE%D0%B3%20xonogiin%20xyazgaargui%20bagc%20amjilttai%20ceneglegdej%20tany%20dansnaas%205000%20negj%20xasagdlaa. HTTP/1.1" 200 24
+2023-05-12 14:31:04,564:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:31:04,659:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063-n%20data%20bagc%20duusaxad%20Tany%20negjnees%205000-g%20suutgan%20sungax%20Automat%20sungalt%20idevxitei%20baina.%20Automat%20sungaltyg%20cuclax%20bol%20555%20dugaart%20OFF%20gej%20ilgeene%20uu.Gmobile HTTP/1.1" 200 24
+2023-05-12 14:31:04,661:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:31:04,712:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97181063&text=97162962-s%20tany%20dugaart%20Enjoy%20kids%20uilchilgeenii%203GB-%3E1mbpsGB%2C%2030%20%D1%85%D0%BE%D0%BD%D0%BE%D0%B3%20xonogiin%20xyazgaargui%20bagc%20idevxjuullee.%20Airplane%20mode-oo%20asaaj%20untraana%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 14:38:23,023:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-12 14:38:37,609:INFO:97162962
+2023-05-12 14:38:37,609:INFO:97181063 5000
+2023-05-12 14:38:37,622:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:38,535:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:38:38,539:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:38,763:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 172
+2023-05-12 14:38:38,768:INFO:res_head_number
+2023-05-12 14:38:38,768:INFO:{'state': 'Successful', 'number': '97162962', 'type': 'WCDMA', 'plan': 'A', 'balance': 21195.88, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:38:38,770:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:39,679:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:38:39,685:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:39,912:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 165
+2023-05-12 14:38:39,917:INFO:res_member_number
+2023-05-12 14:38:39,917:INFO:{'state': 'Successful', 'number': '97181063', 'type': 'WCDMA', 'plan': 'G', 'balance': 0, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:38:39,925:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:40,835:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:38:40,840:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:41,678:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-12 14:38:41,682:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:38:41,736:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063%20tany%20dugaartai%20xolbogdoogui%20baina.%20Ta%20xuuxdiin%20dugaaraa%20uuriin%20dugaartai%20xolboxyg%20xusvel%20gmobile.mn%20esvel%20lavlax%203636-s%20medeelel%20avna%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 14:38:41,740:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:42,657:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:38:42,664:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:42,778:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 137
+2023-05-12 14:38:42,799:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:43,708:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:38:43,711:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:38:43,765:DEBUG:https://charge.gmobile.mn:443 "POST /api/priceplan/charge HTTP/1.1" 200 219
+2023-05-12 14:38:43,766:INFO:res_charge
+2023-05-12 14:38:43,782:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:38:43,828:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063-t%20Enjoy%20kids%20uilchilgeenii%203GB-%3E1mbpsGB%2C%2030%20%D1%85%D0%BE%D0%BD%D0%BE%D0%B3%20xonogiin%20xyazgaargui%20bagc%20amjilttai%20ceneglegdej%20tany%20dansnaas%205000%20negj%20xasagdlaa. HTTP/1.1" 200 24
+2023-05-12 14:38:44,843:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:38:44,900:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063-n%20data%20bagc%20duusaxad%20Tany%20negjnees%205000-g%20suutgan%20sungax%20Automat%20sungalt%20idevxitei%20baina.%20Automat%20sungaltyg%20cuclax%20bol%20555%20dugaart%20OFF%20gej%20ilgeene%20uu.Gmobile HTTP/1.1" 200 24
+2023-05-12 14:38:44,903:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:38:44,941:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97181063&text=97162962-s%20tany%20dugaart%20Enjoy%20kids%20uilchilgeenii%203GB-%3E1mbpsGB%2C%2030%20%D1%85%D0%BE%D0%BD%D0%BE%D0%B3%20xonogiin%20xyazgaargui%20bagc%20idevxjuullee.%20Airplane%20mode-oo%20asaaj%20untraana%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 14:40:22,155:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-12 14:42:00,434:INFO:98145832
+2023-05-12 14:42:00,434:INFO:97181063 5000
+2023-05-12 14:42:00,443:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:42:01,354:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:42:01,359:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:42:01,576:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 171
+2023-05-12 14:42:01,577:INFO:res_head_number
+2023-05-12 14:42:01,577:INFO:{'state': 'Successful', 'number': '98145832', 'type': 'WCDMA', 'plan': 'A', 'balance': 1437.28, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:42:01,579:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:42:02,495:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:42:02,497:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:42:02,722:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 165
+2023-05-12 14:42:02,727:INFO:res_member_number
+2023-05-12 14:42:02,728:INFO:{'state': 'Successful', 'number': '97181063', 'type': 'WCDMA', 'plan': 'G', 'balance': 0, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:42:02,735:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:42:03,668:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:42:03,670:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:42:04,475:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 54
+2023-05-12 14:42:04,481:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:42:04,590:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=98145832&text=97181063%20tany%20dugaartai%20xolbogdoogui%20baina.%20Ta%20xuuxdiin%20dugaaraa%20uuriin%20dugaartai%20xolboxyg%20xusvel%20gmobile.mn%20esvel%20lavlax%203636-s%20medeelel%20avna%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 14:43:12,065:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-12 14:43:51,820:INFO:97162962
+2023-05-12 14:43:51,820:INFO:97181063 5000
+2023-05-12 14:43:51,828:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:52,734:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:43:52,740:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:52,950:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 172
+2023-05-12 14:43:52,951:INFO:res_head_number
+2023-05-12 14:43:52,951:INFO:{'state': 'Successful', 'number': '97162962', 'type': 'WCDMA', 'plan': 'A', 'balance': 21195.88, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:43:52,954:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:53,860:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:43:53,862:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:54,034:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 165
+2023-05-12 14:43:54,035:INFO:res_member_number
+2023-05-12 14:43:54,035:INFO:{'state': 'Successful', 'number': '97181063', 'type': 'WCDMA', 'plan': 'G', 'balance': 0, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:43:54,037:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:55,020:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:43:55,023:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:55,886:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-12 14:43:55,888:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:56,801:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:43:56,811:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:56,943:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 137
+2023-05-12 14:43:56,967:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:57,898:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:43:57,901:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:43:57,943:DEBUG:https://charge.gmobile.mn:443 "POST /api/priceplan/charge HTTP/1.1" 200 219
+2023-05-12 14:43:57,945:INFO:res_charge
+2023-05-12 14:43:57,962:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:43:58,007:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063-t%20Enjoy%20kids%20uilchilgeenii%203GB-%3E1mbpsGB%2C%2030%20%D1%85%D0%BE%D0%BD%D0%BE%D0%B3%20xonogiin%20xyazgaargui%20bagc%20amjilttai%20ceneglegdej%20tany%20dansnaas%205000%20negj%20xasagdlaa. HTTP/1.1" 200 24
+2023-05-12 14:43:59,024:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:43:59,056:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97162962&text=97181063-n%20data%20bagc%20duusaxad%20Tany%20negjnees%205000-g%20suutgan%20sungax%20Automat%20sungalt%20idevxitei%20baina.%20Automat%20sungaltyg%20cuclax%20bol%20555%20dugaart%20OFF%20gej%20ilgeene%20uu.Gmobile HTTP/1.1" 200 24
+2023-05-12 14:43:59,059:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:43:59,090:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97181063&text=97162962-s%20tany%20dugaart%20Enjoy%20kids%20uilchilgeenii%203GB-%3E1mbpsGB%2C%2030%20%D1%85%D0%BE%D0%BD%D0%BE%D0%B3%20xonogiin%20xyazgaargui%20bagc%20idevxjuullee.%20Airplane%20mode-oo%20asaaj%20untraana%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 14:45:55,961:INFO:D:\Projects\enjoy_kids\other_api_s\charge_between.py changed, reloading.
+2023-05-12 14:48:34,394:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-12 14:48:55,430:INFO:97182761
+2023-05-12 14:48:55,430:INFO:97162962 5000
+2023-05-12 14:48:55,438:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:48:56,345:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:48:56,352:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:48:56,598:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 165
+2023-05-12 14:48:56,602:INFO:res_head_number
+2023-05-12 14:48:56,602:INFO:{'state': 'Successful', 'number': '97182761', 'type': 'WCDMA', 'plan': 'A', 'balance': 0, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:48:56,609:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:48:57,535:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:48:57,540:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:48:57,733:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 172
+2023-05-12 14:48:57,738:INFO:res_member_number
+2023-05-12 14:48:57,738:INFO:{'state': 'Successful', 'number': '97162962', 'type': 'WCDMA', 'plan': 'A', 'balance': 21195.88, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 14:48:57,745:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:48:58,658:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 14:48:58,664:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 14:48:59,496:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 54
+2023-05-12 14:48:59,499:DEBUG:Starting new HTTP connection (1): sms-special.gmobile.mn:80
+2023-05-12 14:48:59,549:DEBUG:http://sms-special.gmobile.mn:80 "GET /cgi-bin/sendsms?username=enjoy&password=kids&from=555&to=97182761&text=97162962%20tany%20dugaartai%20xolbogdoogui%20baina.%20Ta%20xuuxdiin%20dugaaraa%20uuriin%20dugaartai%20xolboxyg%20xusvel%20gmobile.mn%20esvel%20lavlax%203636-s%20medeelel%20avna%20uu.%20Gmobile HTTP/1.1" 200 24
+2023-05-12 15:03:55,650:INFO:97162962
+2023-05-12 15:03:55,650:INFO:97181069 5000
+2023-05-12 15:03:55,664:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 15:03:56,573:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 15:03:56,576:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 15:03:56,777:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 172
+2023-05-12 15:03:56,781:INFO:res_head_number
+2023-05-12 15:03:56,781:INFO:{'state': 'Successful', 'number': '97162962', 'type': 'WCDMA', 'plan': 'A', 'balance': 21195.88, 'postpaid': 'N', 'default_price_plan': '70/70', 'default_basic_pp': 'D70', 'unlimited': ''}
+2023-05-12 15:03:56,783:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 15:03:57,676:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 15:03:57,681:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 15:03:57,856:DEBUG:https://charge.gmobile.mn:443 "POST /api/number/check HTTP/1.1" 200 162
+2023-05-12 15:03:57,861:INFO:res_member_number
+2023-05-12 15:03:57,861:INFO:{'state': 'Successful', 'number': '97181069', 'type': 'WCDMA', 'plan': 'A', 'balance': 0, 'postpaid': 'N', 'default_price_plan': 'G30', 'default_basic_pp': 'G30', 'unlimited': ''}
+2023-05-12 15:03:57,868:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 15:03:58,828:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-12 15:03:58,830:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-12 15:03:59,672:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-12 15:50:47,808:INFO:98987249
+2023-05-12 15:50:47,808:INFO:1day
+2023-05-12 15:52:18,330:INFO:98987249
+2023-05-12 15:52:18,330:INFO:1DAY

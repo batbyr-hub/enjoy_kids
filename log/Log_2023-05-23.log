@@ -1,0 +1,20 @@
+2023-05-23 18:33:56,146:WARNING:Not Found: /api/get_enjoykids_numbers
+2023-05-23 18:34:25,116:INFO:get_enjoykids_number
+2023-05-23 18:35:15,888:WARNING:Method Not Allowed: /api/get_enjoykids_number
+2023-05-23 18:38:41,174:ERROR:Internal Server Error: /api/get_enjoykids_number
+Traceback (most recent call last):
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\rest_framework\renderers.py", line 722, in render
+    template = loader.get_template(self.template)
+  File "D:\Projects\enjoy_kids\venvNew\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+2023-05-23 18:41:25,082:INFO:D:\Projects\enjoy_kids\my_api_s\get_numbers.py changed, reloading.
+2023-05-24 10:55:51,152:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.

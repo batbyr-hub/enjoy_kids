@@ -1,0 +1,74 @@
+2023-05-03 10:59:57,911:INFO:97162962
+2023-05-03 10:59:57,911:INFO:helpaaa
+2023-05-03 10:59:57,937:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 10:59:58,897:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-03 10:59:58,904:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 10:59:59,731:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-03 10:59:59,990:ERROR:Internal Server Error: /api/receive_sms555
+Traceback (most recent call last):
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\controller\views.py", line 29, in receive_sms555
+    if res_head_check["state"] == "Successful":
+TypeError: 'Response' object is not subscriptable
+2023-05-03 11:02:41,764:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-03 11:02:55,782:INFO:97162962
+2023-05-03 11:02:55,782:INFO:helpaaa
+2023-05-03 11:02:55,794:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 11:02:56,688:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-03 11:02:56,691:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 11:02:57,526:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-03 11:03:48,113:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-03 11:03:51,043:INFO:97162962
+2023-05-03 11:03:51,043:INFO:helpaaa
+2023-05-03 11:03:51,055:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 11:03:51,950:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-03 11:03:51,956:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 11:03:52,755:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 92
+2023-05-03 11:05:53,398:INFO:D:\Projects\enjoy_kids\other_api_s\charge_between.py changed, reloading.
+2023-05-03 12:08:08,179:INFO:D:\Projects\enjoy_kids\controller\views.py changed, reloading.
+2023-05-03 18:12:07,945:INFO:98996505
+2023-05-03 18:12:07,975:INFO:
+2023-05-03 18:12:08,135:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 18:12:09,142:DEBUG:https://charge.gmobile.mn:443 "POST /api/login_check HTTP/1.1" 200 859
+2023-05-03 18:12:09,149:DEBUG:Starting new HTTPS connection (1): charge.gmobile.mn:443
+2023-05-03 18:12:13,692:DEBUG:https://charge.gmobile.mn:443 "POST /api/memberNumber/check HTTP/1.1" 200 54
+2023-05-03 18:12:14,003:ERROR:Internal Server Error: /api/receive_sms555
+Traceback (most recent call last):
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\enjoy_kids\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\Projects\enjoy_kids\controller\views.py", line 29, in receive_sms555
+    res_memberNumber_check = json.loads(res_memberNumber_check.content)
+AttributeError: 'dict' object has no attribute 'content'
